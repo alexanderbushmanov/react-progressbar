@@ -6,8 +6,8 @@ import {
   PROGRESSBAR_PREV_STEP
 } from '../constants';
 
-import { arrToMap } from './utils'
-import { Record } from 'immutable'
+import { arrToMap } from './utils';
+import { Record } from 'immutable';
 
 
 const ProgressbarRecord = Record({
