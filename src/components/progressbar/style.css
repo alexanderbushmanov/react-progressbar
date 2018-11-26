@@ -1,0 +1,106 @@
+.progressbar {
+    display: block;
+    width: 90%;
+    margin: 30px 5%;
+
+    border: 1px solid #5125da;
+    border-radius: 15px;
+}
+
+
+.progressbar_header {
+    display: flex;
+}
+.progressbar_step {
+    flex: 1;
+    height: 120px;
+
+    padding-top: 20px;
+    text-align: center;
+
+    font: bold 15px Arial, Helvetica, sans-serif;
+    color: #dbdbdb;
+
+    position: relative;
+
+    transition: all ease .7s;
+}
+.progressbar_step-active {
+    color: #5125da;
+}
+.progressbar_step:before {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+
+    box-sizing: border-box;
+    border: 4px solid #dbdbdb;
+    border-radius: 50%;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+
+    content: '';
+    z-index: 2;
+
+    transition: all ease .7s;
+}
+.progressbar_step-active:before {
+    border-color: #5125da;
+}
+.progressbar_step:after {
+    display: block;
+    width: 100%;
+    height: 10px;
+    background: #dbdbdb;
+
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    margin-top: -5px;
+
+    content: '';
+    z-index: 1;
+
+    transition: all ease .7s;
+}
+.progressbar_step:first-child:after {
+    display: none;
+}
+.progressbar_step-active:after {
+    background: #5125da;
+}
+
+.progressbar_controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.progressbar_controls button {
+
+    background: #5125da;
+    color: #fff;
+    font: 400 14px Arial, Helvetica, sans-serif;
+
+    padding: 3px 15px;
+    border: none;
+    border-radius: 15px 15px 0 0;
+
+    cursor: pointer;
+}
+.progressbar_controls button:focus {
+    outline: none;
+}
+.progressbar_controls button:first-child {
+    border-radius: 0 15px;
+    transform: translate(-1px, 1px);
+}
+.progressbar_controls button:last-child {
+    border-radius: 15px 0;
+    transform: translate(1px, 1px);
+}
